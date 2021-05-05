@@ -29,7 +29,7 @@ namespace Meli.ApiRestDNA.Controllers.v1
         /// <response code="500">Internal server error</response>
         [HttpGet]
         [Produces("application/json")]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof (ReportResponse),(int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<ActionResult> GetAsync()
         {
