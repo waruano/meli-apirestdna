@@ -1,5 +1,5 @@
-#Examen Mercadolibre
-##Problema
+# Examen Mercadolibre
+## Problema
 Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar contra los X-Men.
 Te ha contratado a ti para que desarrolles un proyecto que detecte si unhumano es mutante basándose en su secuencia de ADN.
 Para eso te ha pedido crear un programa con un método o función con la siguiente firma (En alguno de los siguiente lenguajes: Java / Golang / C-C++ / Javascript (node) / Python / Ruby):
@@ -17,12 +17,12 @@ String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 ```
 En este caso el llamado a la función isMutant(dna) devuelve “true”.
 
-#Solución
+# Solución
 la solución fue desplegada en Azure como aplicacion web bajo el siguiente dominio:
 https://app-meliapirestdna-prod.azurewebsites.net/swagger/index.html
 
-##Instalación
-###Pre-requisitos
+## Instalación
+### Pre-requisitos
 * [MongoDb](https://www.mongodb.com/try/download/community)
 * [Net Core SDK 3.1](https://dotnet.microsoft.com/download)
 
