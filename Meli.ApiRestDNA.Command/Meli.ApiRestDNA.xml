@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Meli.ApiRestDNA</name>
+    </assembly>
+    <members>
+        <member name="M:Meli.ApiRestDNA.Controllers.v1.MutantController.PostAsync(Meli.ApiRestDNA.Model.DnaRequest)">
+            <summary>
+            Evaluate dna.
+            </summary>
+            <param name="request"></param>
+            <returns>dna evaluated.</returns>
+            <response code="200">the dna is from a mutant</response>
+            <response code="400">the dna was invalid</response>
+            <response code="403">the dna is from a human</response>
+        </member>
+        <member name="M:Meli.ApiRestDNA.Controllers.v1.StatsController.GetAsync">
+            <summary>
+            Get Stats
+            </summary>
+            <returns>json with dna statistics </returns>
+            <response code="200">ok</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:Meli.ApiRestDNA.Domain.Extensions.DnaExtension.TransformDna(System.String)">
+            <summary>
+            Transform string to char array, Upper Case and Trim
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meli.ApiRestDNA.SwaggerDefaultValues">
+            <summary>
+            Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:Meli.ApiRestDNA.SwaggerDefaultValues.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+    </members>
+</doc>
