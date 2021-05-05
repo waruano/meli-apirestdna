@@ -35,6 +35,21 @@
             (A, T, C, G), las cuales representa cada base nitrogenada del ADN.
             </summary>
         </member>
+        <member name="P:Meli.ApiRestDNA.Model.ReportResponse.CountMutantDna">
+            <summary>
+            numero total de mutantes
+            </summary>
+        </member>
+        <member name="P:Meli.ApiRestDNA.Model.ReportResponse.CountHumanDna">
+            <summary>
+            numero total de humanos evaluados
+            </summary>
+        </member>
+        <member name="P:Meli.ApiRestDNA.Model.ReportResponse.RoundedRatio">
+            <summary>
+            Relacion entre mutantes y humanos
+            </summary>
+        </member>
         <member name="T:Meli.ApiRestDNA.SwaggerDefaultValues">
             <summary>
             Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
