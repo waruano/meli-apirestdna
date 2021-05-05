@@ -140,7 +140,7 @@ La matriz de adn debe ser de tamaño NxN y el dominio de sus caracteres es `'A',
 
 ## Nivel 3
 
-###Base de Datos
+### Base de Datos
 Se anexa una base de datos mongo para persistir los adns validados, esta base de datos tiene dos colecciones:
 **Humans**: Contiene la información del adn junto con una marca "isMutant" la cual indica si el humano es o no mutante.
 **Report**: Guarda un único documento el cual es actualizado mediante un evento emitido por el guardado de cada documento correspondiente al humano. Esta colección puede ser reemplazada por un registro en algún servicio de cache distribuida como Redis Cache.
@@ -186,9 +186,9 @@ Muestra estadisticas de los adns validados mediante el apirest
   "details": "string"
 }
 ```
-##Pruebas unitarias
+## Pruebas unitarias
 
 El proyecto **Meli.ApiRestDNA** tiene una cobertura de `90.9%`
 
-##Soporte de tráfico
+## Soporte de tráfico
 La aplicación en el host donde está albergada actualmente no posee la capacidad para soportar las cantidades agresivas de tráfico presentadas en el problema, sin embargo, la aplicación es contenerizable por lo que podríamos pensar en un despliegue en k8s.
