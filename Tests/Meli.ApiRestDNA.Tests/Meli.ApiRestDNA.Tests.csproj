@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Meli.ApiRestDNA.Command\Meli.ApiRestDNA.csproj" />
+    <ProjectReference Include="..\..\Meli.ApiRestDNA\Meli.ApiRestDNA.csproj" />
   </ItemGroup>
 
 </Project>

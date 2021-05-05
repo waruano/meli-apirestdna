@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["Meli.ApiRestDNA.Command/Meli.ApiRestDNA.Command.csproj", "Meli.ApiRestDNA.Command/"]
-RUN dotnet restore "Meli.ApiRestDNA.Command/Meli.ApiRestDNA.Command.csproj"
+COPY ["Meli.ApiRestDNA/Meli.ApiRestDNA.csproj", "Meli.ApiRestDNA/"]
+RUN dotnet restore "Meli.ApiRestDNA/Meli.ApiRestDNA.csproj"
 COPY . .
-WORKDIR "/src/Meli.ApiRestDNA.Command"
-RUN dotnet build "Meli.ApiRestDNA.Command.csproj" -c Release -o /app/build
+WORKDIR "/src/Meli.ApiRestDNA"
+RUN dotnet build "Meli.ApiRestDNA.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Meli.ApiRestDNA.Command.csproj" -c Release -o /app/publish
+RUN dotnet publish "Meli.ApiRestDNA.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Meli.ApiRestDNA.Command.dll"]
+ENTRYPOINT ["dotnet", "Meli.ApiRestDNA.dll"]
