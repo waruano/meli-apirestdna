@@ -7,6 +7,11 @@ namespace Meli.ApiRestDNA.Model
 {
     public class DnaRequest
     {
+        /// <summary>
+        /// un array de Strings que representan cada fila de una tabla de(NxN)
+        /// con la secuencia del ADN.Las letras de los Strings solo pueden ser:
+        /// (A, T, C, G), las cuales representa cada base nitrogenada del ADN.
+        /// </summary>
         public List<string> Dna { get; set; }
     }
 

@@ -4,6 +4,7 @@ using Meli.ApiRestDNA.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Threading.Tasks;
+using Meli.ApiRestDNA.Shared.Model;
 
 namespace Meli.ApiRestDNA.Controllers.v1
 {
@@ -31,8 +32,8 @@ namespace Meli.ApiRestDNA.Controllers.v1
         [HttpPost]
         [Produces("application/json")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
+        [ProducesResponseType(typeof(ErrorDetails),(int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.Forbidden)]
         public async Task<ActionResult> PostAsync([FromBody] DnaRequest request)
         {
             await _mediator.Send(new DnaValidatorCommand(request.Dna));
