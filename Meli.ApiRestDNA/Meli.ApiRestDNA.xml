@@ -28,6 +28,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="P:Meli.ApiRestDNA.Model.DnaRequest.Dna">
+            <summary>
+            un array de Strings que representan cada fila de una tabla de(NxN)
+            con la secuencia del ADN.Las letras de los Strings solo pueden ser:
+            (A, T, C, G), las cuales representa cada base nitrogenada del ADN.
+            </summary>
+        </member>
         <member name="T:Meli.ApiRestDNA.SwaggerDefaultValues">
             <summary>
             Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
